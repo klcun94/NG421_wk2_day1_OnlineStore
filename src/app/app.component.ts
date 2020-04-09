@@ -9,11 +9,16 @@ import { ProductService } from './services/product.service';
 })
 export class AppComponent implements OnInit {
   products: Array<Iproduct>;
+  product: Iproduct;
 
   constructor(private productService: ProductService) {
 
   }
   ngOnInit() {
     this.products = this.productService.getProducts();
+  }
+
+  productWasAdded(product: Iproduct) {
+    this.productService.addToCart(product);
   }
 }
