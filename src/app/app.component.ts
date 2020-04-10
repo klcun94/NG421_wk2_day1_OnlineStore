@@ -18,7 +18,7 @@ export class AppComponent implements OnInit {
     this.products = this.productService.getProducts();
   }
 
-  productWasAdded(product: Iproduct) {
+  productWasAdded(product: Iproduct): void {
     this.productService.addToCart(product);
   }
 }
