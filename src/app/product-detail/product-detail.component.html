@@ -10,13 +10,7 @@
         <button (click)='addToCart()' type="submit" name="submit">Add to Cart</button>
         <div class="ratings">
             <p class="pull-right">Reviews: {{ product.reviews }}</p>
-            <p>
-                <span class="glyphicon glyphicon-star"></span>
-                <span class="glyphicon glyphicon-star"></span>
-                <span class="glyphicon glyphicon-star"></span>
-                <span class="glyphicon glyphicon-star"></span>
-                <span class="glyphicon glyphicon-star-empty"></span>
-            </p>
+            <app-rating [rating] = 'product.rating'></app-rating>
         </div>
     </div>
 </div>
